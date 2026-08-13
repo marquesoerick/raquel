@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professora Raquel — Pré-candidata a Deputada Federal | Espírito Santo</title>
+<meta name="description" content="Professora Raquel Rocha, 1ª mulher vice-prefeita de São Mateus-ES, é pré-candidata a Deputada Federal pelo Espírito Santo. Conheça sua trajetória na educação e na gestão pública.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Archivo+Black&display=swap" rel="stylesheet">
+<style>
+:root{
+  --azul-uniao:#0B2E8F;
+  --azul-profundo:#071E5E;
+  --azul-claro:#2B54C8;
+  --amarelo:#FFCC00;
+  --amarelo-suave:#FFE477;
+  --branco:#FFFFFF;
+  --gelo:#F2F5FC;
+  --grafite:#12203F;
+  --cinza:#56608A;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Archivo',system-ui,sans-serif;
+  font-variation-settings:'wdth' 100;
+  color:var(--grafite);
+  background:var(--branco);
+  line-height:1.6;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;}
+
+/* ===== faixa de identificação de pré-campanha ===== */
+.faixa-precampanha{
+  background:var(--amarelo);
+  color:var(--azul-profundo);
+  text-align:center;
+  font-size:.78rem;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  padding:.5rem 1rem;
+}
+
+/* ===== header ===== */
+header{
+  position:sticky;top:0;z-index:50;
+  background:var(--azul-uniao);
+  color:var(--branco);
+}
+.nav-wrap{
+  max-width:1120px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.9rem 1.25rem;
+}
+.marca{
+  font-family:'Archivo Black',sans-serif;
+  font-size:1.05rem;line-height:1.1;
+  text-transform:uppercase;letter-spacing:.02em;
+  text-decoration:none;
+}
+.marca span{color:var(--amarelo);}
+nav ul{display:flex;gap:1.6rem;list-style:none;}
+nav a{
+  text-decoration:none;font-weight:600;font-size:.9rem;
+  padding-bottom:.2rem;border-bottom:2px solid transparent;
+  transition:border-color .2s;
+}
+nav a:hover,nav a:focus-visible{border-color:var(--amarelo);outline:none;}
+.menu-btn{display:none;background:none;border:2px solid var(--amarelo);color:var(--amarelo);
+  font-family:inherit;font-weight:700;padding:.4rem .8rem;border-radius:6px;cursor:pointer;}
+
+/* ===== hero ===== */
+.hero{
+  background:linear-gradient(160deg,var(--azul-profundo) 0%,var(--azul-uniao) 55%,var(--azul-claro) 100%);
+  color:var(--branco);
+  overflow:hidden;position:relative;
+}
+.hero-inner{
+  max-width:1120px;margin:0 auto;
+  padding:5rem 1.25rem 6.5rem;
+  position:relative;z-index:2;
+}
+.hero .chapeu{
+  display:inline-block;
+  background:var(--amarelo);color:var(--azul-profundo);
+  font-weight:800;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;
+  padding:.45rem .9rem;border-radius:999px;
+  margin-bottom:1.4rem;
+}
+.hero h1{
+  font-family:'Archivo Black',sans-serif;
+  font-size:clamp(2.4rem,6.5vw,4.6rem);
+  line-height:.98;text-transform:uppercase;
+  max-width:14ch;
+}
+.hero h1 em{
+  font-style:normal;color:var(--amarelo);
+  position:relative;display:inline-block;
+}
+.hero p.lede{
+  margin-top:1.6rem;max-width:52ch;
+  font-size:1.12rem;color:#DCE4FA;
+}
+.hero .acoes{margin-top:2.2rem;display:flex;gap:1rem;flex-wrap:wrap;}
+.btn{
+  display:inline-block;text-decoration:none;font-weight:800;
+  padding:.85rem 1.6rem;border-radius:8px;font-size:.95rem;
+  transition:transform .15s, box-shadow .15s;
+}
+.btn:hover{transform:translateY(-2px);}
+.btn-amarelo{background:var(--amarelo);color:var(--azul-profundo);box-shadow:0 6px 18px rgba(0,0,0,.25);}
+.btn-vazado{border:2px solid var(--branco);color:var(--branco);}
+/* sorriso — arco amarelo assinatura */
+.sorriso{
+  position:absolute;bottom:-2px;left:0;width:100%;height:120px;z-index:2;
+  pointer-events:none;
+}
+/* foto integrada ao fundo do hero */
+.hero-foto{
+  position:absolute;bottom:0;z-index:1;
+  right:max(2rem,calc((100vw - 1120px)/2));
+  width:clamp(260px,32vw,420px);
+  pointer-events:none;
+}
+.hero-foto::before{
+  content:"";position:absolute;inset:auto -12% -18% -12%;
+  aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,204,0,.4) 0%,rgba(255,204,0,.12) 45%,transparent 70%);
+  z-index:-1;
+}
+.hero-foto img{
+  width:100%;
+  filter:drop-shadow(0 18px 40px rgba(3,12,45,.55));
+}
+@media(min-width:980px){
+  .hero-inner{padding-right:min(38%,440px);}
+}
+@media(max-width:979px){
+  .hero-foto{position:static;display:block;margin:2.5rem auto -2px;width:min(300px,72vw);}
+  .hero-foto::before{inset:auto 0 0 0;}
+}
+
+/* ===== seções ===== */
+section{padding:4.5rem 1.25rem;}
+.container{max-width:1120px;margin:0 auto;}
+.rotulo{
+  font-weight:800;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--azul-uniao);
+  display:flex;align-items:center;gap:.6rem;margin-bottom:.8rem;
+}
+.rotulo::before{content:"";width:34px;height:5px;background:var(--amarelo);border-radius:3px;}
+h2{
+  font-family:'Archivo Black',sans-serif;
+  font-size:clamp(1.7rem,3.6vw,2.5rem);
+  text-transform:uppercase;line-height:1.05;
+  color:var(--azul-profundo);
+  margin-bottom:1.2rem;
+}
+
+/* perfil */
+.perfil{background:var(--gelo);}
+.perfil-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:start;}
+.perfil p{margin-bottom:1rem;color:#2A3557;}
+.cartao-fatos{
+  background:var(--azul-uniao);color:var(--branco);
+  border-radius:16px;padding:2rem;
+  border-bottom:8px solid var(--amarelo);
+}
+.cartao-fatos h3{
+  font-family:'Archivo Black',sans-serif;text-transform:uppercase;
+  font-size:1rem;letter-spacing:.06em;color:var(--amarelo);margin-bottom:1.2rem;
+}
+.cartao-fatos ul{list-style:none;}
+.cartao-fatos li{
+  padding:.75rem 0;border-top:1px solid rgba(255,255,255,.18);
+  display:flex;gap:.7rem;align-items:flex-start;font-size:.95rem;
+}
+.cartao-fatos li::before{content:"✓";color:var(--amarelo);font-weight:900;}
+
+/* trajetória */
+.linha{position:relative;margin-top:2.5rem;}
+.linha::before{
+  content:"";position:absolute;left:10px;top:6px;bottom:6px;
+  width:4px;background:linear-gradient(var(--amarelo),var(--azul-uniao));border-radius:2px;
+}
+.marco{position:relative;padding:0 0 2.2rem 3rem;}
+.marco:last-child{padding-bottom:0;}
+.marco::before{
+  content:"";position:absolute;left:2px;top:6px;
+  width:20px;height:20px;border-radius:50%;
+  background:var(--amarelo);border:4px solid var(--azul-uniao);
+}
+.marco .quando{
+  font-weight:800;color:var(--azul-uniao);
+  font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;
+}
+.marco h3{font-size:1.15rem;color:var(--azul-profundo);margin:.15rem 0 .3rem;}
+.marco p{color:#3A4568;font-size:.97rem;max-width:62ch;}
+
+/* bandeiras */
+.bandeiras{background:var(--azul-profundo);color:var(--branco);}
+.bandeiras h2{color:var(--branco);}
+.bandeiras .rotulo{color:var(--amarelo);}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.2rem;margin-top:2rem;}
+.card{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:14px;padding:1.6rem;
+  transition:transform .2s, background .2s;
+}
+.card:hover{transform:translateY(-4px);background:rgba(255,255,255,.1);}
+.card .icone{
+  width:46px;height:46px;border-radius:10px;
+  background:var(--amarelo);color:var(--azul-profundo);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.4rem;margin-bottom:1rem;
+}
+.card h3{font-size:1.05rem;margin-bottom:.5rem;text-transform:uppercase;letter-spacing:.03em;}
+.card p{font-size:.92rem;color:#C9D4F2;}
+.nota-dialogo{
+  margin-top:2rem;font-size:.9rem;color:#AAB8E4;max-width:70ch;
+}
+
+/* norte capixaba */
+.territorio-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;}
+.territorio p{margin-bottom:1rem;color:#2A3557;}
+.destaque-amarelo{
+  background:var(--amarelo);border-radius:16px;padding:2.2rem;
+  color:var(--azul-profundo);
+}
+.destaque-amarelo blockquote{
+  font-family:'Archivo Black',sans-serif;font-size:1.25rem;line-height:1.35;
+  text-transform:none;
+}
+.destaque-amarelo cite{
+  display:block;margin-top:1rem;font-style:normal;font-weight:700;font-size:.9rem;
+}
+
+/* participar */
+.participar{background:var(--gelo);text-align:center;}
+.participar p{max-width:60ch;margin:0 auto 2rem;color:#2A3557;}
+.redes{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;}
+.rede{
+  display:flex;align-items:center;gap:.6rem;
+  background:var(--azul-uniao);color:var(--branco);
+  text-decoration:none;font-weight:700;font-size:.95rem;
+  padding:.8rem 1.4rem;border-radius:10px;
+  transition:transform .15s;
+}
+.rede:hover{transform:translateY(-2px);}
+.rede span.b{color:var(--amarelo);font-weight:900;}
+
+/* footer */
+footer{background:var(--azul-profundo);color:#BFCBEE;font-size:.85rem;}
+.footer-topo{
+  max-width:1120px;margin:0 auto;padding:3rem 1.25rem 2rem;
+  display:grid;grid-template-columns:1.2fr 1fr;gap:2.5rem;
+}
+.footer-topo .marca{font-size:1.2rem;color:var(--branco);}
+.footer-topo p{margin-top:.8rem;max-width:48ch;}
+.legal{
+  border-top:1px solid rgba(255,255,255,.15);
+  padding:1.5rem 1.25rem 2rem;
+}
+.legal .container{font-size:.78rem;line-height:1.7;color:#93A3D6;}
+.legal strong{color:var(--amarelo);}
+
+@media(max-width:820px){
+  .perfil-grid,.territorio-grid,.footer-topo{grid-template-columns:1fr;}
+  nav ul{display:none;position:absolute;top:100%;left:0;right:0;background:var(--azul-uniao);
+    flex-direction:column;gap:0;padding:.5rem 0;border-top:1px solid rgba(255,255,255,.2);}
+  nav ul.aberto{display:flex;}
+  nav li a{display:block;padding:.9rem 1.25rem;border-bottom:none;}
+  .menu-btn{display:block;}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  .btn,.card,.rede{transition:none;}
+}
+</style>
+</head>
+<body>
+
+<div class="faixa-precampanha">Página de divulgação de pré-candidatura — Eleições 2026 · Conteúdo nos termos do art. 36-A da Lei nº 9.504/1997</div>
+
+<header>
+  <div class="nav-wrap">
+    <a class="marca" href="#inicio">Professora <span>Raquel</span></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu" onclick="const m=document.getElementById('menu');const ab=m.classList.toggle('aberto');this.setAttribute('aria-expanded',ab)">Menu</button>
+    <nav aria-label="Navegação principal">
+      <ul id="menu">
+        <li><a href="#perfil">Quem é</a></li>
+        <li><a href="#trajetoria">Trajetória</a></li>
+        <li><a href="#pautas">Pautas</a></li>
+        <li><a href="#territorio">Norte Capixaba</a></li>
+        <li><a href="#participar">Acompanhe</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-inner">
+      <span class="chapeu">Pré-candidata a Deputada Federal · Espírito Santo</span>
+      <h1>Educação, trabalho e <em>voz para o povo</em> capixaba</h1>
+      <p class="lede">Raquel Rocha, a Professora Raquel, fez história como a primeira mulher eleita vice-prefeita de São Mateus. Agora, apresenta seu nome como pré-candidata a Deputada Federal, com a missão de levar a experiência da sala de aula e da gestão pública ao Congresso Nacional.</p>
+      <div class="acoes">
+        <a class="btn btn-amarelo" href="#trajetoria">Conheça a trajetória</a>
+        <a class="btn btn-vazado" href="#pautas">Veja as pautas em debate</a>
+      </div>
+    </div>
+    <div class="hero-foto">
+      <img src="foto-raquel.webp" alt="Professora Raquel Rocha, pré-candidata a Deputada Federal, sorrindo com blusa rosa">
+    </div>
+    <!-- assinatura visual: o "sorriso" amarelo -->
+    <svg class="sorriso" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,90 Q720,-40 1440,90 L1440,120 L0,120 Z" fill="#FFCC00"/>
+      <path d="M0,104 Q720,-16 1440,104 L1440,120 L0,120 Z" fill="#FFFFFF"/>
+    </svg>
+  </div>
+
+  <!-- PERFIL -->
+  <section class="perfil" id="perfil">
+    <div class="container perfil-grid">
+      <div>
+        <p class="rotulo">Quem é</p>
+        <h2>Da sala de aula à gestão pública</h2>
+        <p>Nascida em Boa Esperança, no interior do Espírito Santo, Raquel Rocha construiu sua vida em São Mateus, onde se tornou conhecida pelo nome que carrega com orgulho: <strong>Professora Raquel</strong>. Educadora de formação e vocação, dedicou décadas à educação pública, convivendo de perto com as famílias, os estudantes e os desafios reais das escolas do Norte capixaba.</p>
+        <p>Mulher cristã, de origem simples, transformou essa vivência em serviço público. Em 2024, foi eleita <strong>a primeira mulher vice-prefeita da história de São Mateus</strong>, tomando posse em janeiro de 2025 — um marco para a participação feminina na política da região.</p>
+        <p>Hoje, filiada ao União Brasil a convite da direção estadual do partido, apresenta-se como pré-candidata a Deputada Federal, com a proposta de construir, em diálogo com a população, uma agenda de desenvolvimento para o Espírito Santo.</p>
+      </div>
+      <aside class="cartao-fatos" aria-label="Resumo do perfil">
+        <h3>Em resumo</h3>
+        <ul>
+          <li>Capixaba, nascida em Boa Esperança-ES</li>
+          <li>Professora da rede pública por décadas</li>
+          <li>1ª mulher vice-prefeita de São Mateus-ES</li>
+          <li>Filiada ao União Brasil</li>
+          <li>Pré-candidata a Deputada Federal em 2026</li>
+          <li>Defensora da educação e da presença de mulheres na política</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- TRAJETÓRIA -->
+  <section id="trajetoria">
+    <div class="container">
+      <p class="rotulo">Trajetória</p>
+      <h2>Uma história construída pelo trabalho</h2>
+      <div class="linha">
+        <div class="marco">
+          <span class="quando">Origem</span>
+          <h3>Raízes no interior capixaba</h3>
+          <p>Nascida em Boa Esperança-ES, Raquel cresceu conhecendo de perto a realidade das famílias do Norte do Espírito Santo — realidade que se tornaria o centro de sua atuação pública.</p>
+        </div>
+        <div class="marco">
+          <span class="quando">Magistério</span>
+          <h3>A Professora Raquel</h3>
+          <p>Na educação pública, formou gerações de estudantes em São Mateus. A sala de aula lhe deu escuta, sensibilidade social e o apelido que virou nome político.</p>
+        </div>
+        <div class="marco">
+          <span class="quando">2024</span>
+          <h3>Eleita vice-prefeita de São Mateus</h3>
+          <p>Tornou-se a primeira mulher eleita vice-prefeita na história do município, com a proposta de unir forças e chegar aos lugares que o poder público não alcançava.</p>
+        </div>
+        <div class="marco">
+          <span class="quando">2025</span>
+          <h3>Posse e atuação na gestão municipal</h3>
+          <p>Empossada em janeiro de 2025, passou a atuar na administração de São Mateus, acompanhando de perto as demandas de saúde, educação e desenvolvimento da cidade.</p>
+        </div>
+        <div class="marco">
+          <span class="quando">2026</span>
+          <h3>Pré-candidatura a Deputada Federal</h3>
+          <p>Filiada ao União Brasil, teve sua pré-candidatura anunciada em evento que reuniu centenas de moradores, lideranças e apoiadores em São Mateus, com o compromisso de conduzir a pré-campanha com diálogo e construção coletiva de propostas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAUTAS -->
+  <section class="bandeiras" id="pautas">
+    <div class="container">
+      <p class="rotulo">Pautas em debate</p>
+      <h2>Temas que a Professora Raquel defende</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="icone" aria-hidden="true">📚</div>
+          <h3>Educação pública de qualidade</h3>
+          <p>Valorização dos professores, estrutura digna para as escolas e oportunidades para que os jovens do interior estudem e permaneçam em sua terra.</p>
+        </div>
+        <div class="card">
+          <div class="icone" aria-hidden="true">🤝</div>
+          <h3>Mulheres na política</h3>
+          <p>Ampliação da representatividade feminina nos espaços de decisão, abrindo caminho para que mais mulheres ocupem a vida pública.</p>
+        </div>
+        <div class="card">
+          <div class="icone" aria-hidden="true">🌱</div>
+          <h3>Desenvolvimento do Norte capixaba</h3>
+          <p>Infraestrutura, agricultura, logística e geração de emprego e renda para São Mateus e toda a região Norte do Espírito Santo.</p>
+        </div>
+        <div class="card">
+          <div class="icone" aria-hidden="true">❤️</div>
+          <h3>Saúde e cuidado com as famílias</h3>
+          <p>Fortalecimento da atenção básica e defesa de políticas públicas que cheguem a quem mais precisa, nas cidades e nas comunidades rurais.</p>
+        </div>
+      </div>
+      <p class="nota-dialogo">As posições aqui apresentadas são temas de debate público defendidos pela pré-candidata, divulgados na forma da legislação eleitoral. As propostas definitivas serão construídas em diálogo com a população e apresentadas no período próprio de campanha.</p>
+    </div>
+  </section>
+
+  <!-- TERRITÓRIO -->
+  <section id="territorio">
+    <div class="container territorio-grid">
+      <div class="territorio">
+        <p class="rotulo">Norte Capixaba</p>
+        <h2>Uma voz para São Mateus e região no Congresso</h2>
+        <p>O Norte do Espírito Santo é terra de gente trabalhadora — da agricultura familiar ao comércio, das escolas às comunidades tradicionais. É uma região com enorme potencial logístico e humano, mas que historicamente teve pouca representação na Câmara dos Deputados.</p>
+        <p>A pré-candidatura da Professora Raquel nasce desse território: da vivência real de quem conhece cada bairro, cada distrito e cada demanda da população mateense e das cidades vizinhas.</p>
+      </div>
+      <div class="destaque-amarelo">
+        <blockquote>“Essa é uma missão séria. Acredito na força do trabalho em equipe e na construção conjunta de soluções para o Espírito Santo.”</blockquote>
+        <cite>— Professora Raquel, no anúncio de sua pré-candidatura</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTICIPAR -->
+  <section class="participar" id="participar">
+    <div class="container">
+      <p class="rotulo" style="justify-content:center">Acompanhe</p>
+      <h2>Caminhe junto nessa construção</h2>
+      <p>Siga as redes da Professora Raquel para acompanhar a agenda da pré-campanha, os encontros com a população e a construção coletiva de propostas para o Espírito Santo.</p>
+      <div class="redes">
+        <a class="rede" href="https://www.instagram.com/professoraraquel_/" target="_blank" rel="noopener">
+          <span class="b">→</span> Instagram · @professoraraquel_
+        </a>
+        <a class="rede" href="mailto:contato@professoraraquel.com.br">
+          <span class="b">→</span> Fale com a equipe
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-topo">
+    <div>
+      <span class="marca">Professora <span style="color:var(--amarelo)">Raquel</span></span>
+      <p>Raquel Rocha — Professora, 1ª mulher vice-prefeita de São Mateus-ES e pré-candidata a Deputada Federal pelo Espírito Santo, filiada ao União Brasil.</p>
+    </div>
+    <div>
+      <p><strong style="color:var(--branco)">Navegação</strong><br>
+      <a href="#perfil">Quem é</a> · <a href="#trajetoria">Trajetória</a> · <a href="#pautas">Pautas</a> · <a href="#territorio">Norte Capixaba</a> · <a href="#participar">Acompanhe</a></p>
+    </div>
+  </div>
+  <div class="legal">
+    <div class="container">
+      <p><strong>Aviso legal (conformidade eleitoral):</strong> Esta é uma página de divulgação de <strong>pré-candidatura</strong>, mantida nos termos do art. 36-A da Lei nº 9.504/1997, que autoriza a divulgação de posicionamentos pessoais e da pretensão de candidatura, vedado o pedido explícito de votos. <strong>Este conteúdo não contém pedido de voto.</strong> A candidatura está sujeita à aprovação em convenção partidária e ao registro perante a Justiça Eleitoral. Nenhum conteúdo desta página foi impulsionado ou veiculado mediante pagamento. Material produzido e divulgado sem contratação de publicidade paga, em conformidade com a legislação eleitoral e as resoluções do Tribunal Superior Eleitoral (TSE).</p>
+      <p style="margin-top:.6rem">© 2026 — Página de pré-campanha · Professora Raquel · São Mateus, Espírito Santo.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
