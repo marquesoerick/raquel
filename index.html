@@ -74,8 +74,8 @@ nav a:hover,nav a:focus-visible{border-color:var(--amarelo);outline:none;}
 
 /* ===== hero ===== */
 .hero{
-  background:linear-gradient(160deg,var(--azul-profundo) 0%,var(--azul-uniao) 55%,var(--azul-claro) 100%);
-  color:var(--branco);
+  background:radial-gradient(130% 130% at 78% 40%,#D3D2D2 0%,#CAC9C9 48%,#BFBEBE 100%);
+  color:var(--grafite);
   overflow:hidden;position:relative;
 }
 .hero-inner{
@@ -94,15 +94,17 @@ nav a:hover,nav a:focus-visible{border-color:var(--amarelo);outline:none;}
   font-family:'Archivo Black',sans-serif;
   font-size:clamp(2.4rem,6.5vw,4.6rem);
   line-height:.98;text-transform:uppercase;
-  max-width:14ch;
+  max-width:14ch;color:var(--azul-profundo);
 }
 .hero h1 em{
-  font-style:normal;color:var(--amarelo);
+  font-style:normal;color:var(--azul-profundo);
   position:relative;display:inline-block;
+  background:linear-gradient(transparent 62%,var(--amarelo) 62%);
+  padding:0 .06em;
 }
 .hero p.lede{
   margin-top:1.6rem;max-width:52ch;
-  font-size:1.12rem;color:#DCE4FA;
+  font-size:1.12rem;color:#3A4568;
 }
 .hero .acoes{margin-top:2.2rem;display:flex;gap:1rem;flex-wrap:wrap;}
 .btn{
@@ -112,7 +114,7 @@ nav a:hover,nav a:focus-visible{border-color:var(--amarelo);outline:none;}
 }
 .btn:hover{transform:translateY(-2px);}
 .btn-amarelo{background:var(--amarelo);color:var(--azul-profundo);box-shadow:0 6px 18px rgba(0,0,0,.25);}
-.btn-vazado{border:2px solid var(--branco);color:var(--branco);}
+.btn-vazado{border:2px solid var(--azul-uniao);color:var(--azul-uniao);}
 /* sorriso — arco amarelo assinatura */
 .sorriso{
   position:absolute;bottom:-2px;left:0;width:100%;height:120px;z-index:2;
@@ -128,12 +130,12 @@ nav a:hover,nav a:focus-visible{border-color:var(--amarelo);outline:none;}
 .hero-foto::before{
   content:"";position:absolute;inset:auto -12% -18% -12%;
   aspect-ratio:1;border-radius:50%;
-  background:radial-gradient(circle,rgba(255,204,0,.4) 0%,rgba(255,204,0,.12) 45%,transparent 70%);
+  background:radial-gradient(circle,rgba(255,204,0,.28) 0%,rgba(255,204,0,.08) 45%,transparent 70%);
   z-index:-1;
 }
 .hero-foto img{
   width:100%;
-  filter:drop-shadow(0 18px 40px rgba(3,12,45,.55));
+  filter:drop-shadow(0 12px 30px rgba(120,110,105,.28));
 }
 @media(min-width:980px){
   .hero-inner{padding-right:min(38%,440px);}
@@ -316,7 +318,7 @@ footer{background:var(--azul-profundo);color:#BFCBEE;font-size:.85rem;}
       </div>
     </div>
     <div class="hero-foto">
-      <img src="foto-raquel.webp" alt="Professora Raquel Rocha, pré-candidata a Deputada Federal, sorrindo com blusa rosa">
+      <img src="fotoraquel.jpg" alt="Professora Raquel Rocha, pré-candidata a Deputada Federal, de óculos e blusa rosa, com a mão no queixo">
     </div>
     <!-- assinatura visual: o "sorriso" amarelo -->
     <svg class="sorriso" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
